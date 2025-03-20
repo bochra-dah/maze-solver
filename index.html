@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Solver</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <h1>Maze Solver</h1>
+    <p class="description">
+        Welcome to the Maze Solver! Use the buttons below to solve the maze using Breadth-First Search (BFS), Depth-First Search (DFS), or A* Search.
+        Click "Reset Maze" to clear the solution and start over.
+    </p>
+    <div class="maze" id="maze"></div>
+    <div class="controls">
+        <button class="btn" onclick="solveMaze('BFS')">Solve with BFS</button>
+        <button class="btn" onclick="solveMaze('DFS')">Solve with DFS</button>
+        <button class="btn" onclick="solveMaze('AStar')">Solve with A*</button>
+        <button class="btn pause" onclick="pauseMaze()">Pause</button>
+        <button class="btn reset" onclick="resetMaze()">Reset Maze</button>
+    </div>
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
