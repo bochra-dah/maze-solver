@@ -100,3 +100,14 @@ h1 {
 .btn.reset:hover {
     background-color: #a71d2a;
 }
+
+/* Footer Styles */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+footer strong {
+    color: #333;
+}
