@@ -23,9 +23,9 @@ const stateMapping = [
 const mazeContainer = document.getElementById('maze');
 let visitedCells = [];
 let solutionPath = [];
-let isPaused = false; // Flag to track if the search is paused
+let isPaused = false; 
 
-// Heuristic function table (from the file)
+// Heuristic function table
 const heuristicTable = {
     "A": 8, "1": 6, "2": 6, "3": 6, "4": 7, "5": 4, "6": 12, "7": 7, "8": 15, "9": 18,
     "10": 6, "11": 8, "12": 6, "13": 5, "14": 4, "15": 8, "16": 6, "17": 3, "18": 5,
@@ -39,7 +39,6 @@ function createMaze() {
             const div = document.createElement('div');
             div.classList.add('cell');
             if (cell === 1) div.classList.add('wall');
-            // Display states (like "6", "5", "7") and letters (like "A", "B")
             if (stateMapping[rIdx][cIdx] !== 0) {
                 div.textContent = stateMapping[rIdx][cIdx];
             }
@@ -55,12 +54,12 @@ function createMaze() {
 
 function solveMaze(algorithm) {
     const directions = [[0,1],[1,0],[0,-1],[-1,0]];
-    let start = [7,0], goal = [0,11]; // Start at "A" (7,0), goal at "B" (0,11)
+    let start = [7,0], goal = [0,11]; 
     let queue = [[start]];
     let visited = new Set();
     visitedCells = [];
     solutionPath = [];
-    isPaused = false; // Reset pause flag
+    isPaused = false; 
 
     function delay(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -76,8 +75,8 @@ function solveMaze(algorithm) {
                     let [rowB, colB] = b[b.length - 1];
                     let stateA = stateMapping[rowA][colA];
                     let stateB = stateMapping[rowB][colB];
-                    let fA = a.length + (heuristicTable[stateA] || 0); // f(n) = g(n) + h(n)
-                    let fB = b.length + (heuristicTable[stateB] || 0); // f(n) = g(n) + h(n)
+                    let fA = a.length + (heuristicTable[stateA] || 0); 
+                    let fB = b.length + (heuristicTable[stateB] || 0); 
                     return fA - fB;
                 });
                 path = queue.shift();
@@ -111,7 +110,7 @@ function solveMaze(algorithm) {
 }
 
 function pauseMaze() {
-    isPaused = true; // Set pause flag to true
+    isPaused = true; 
 }
 
 function highlightPath() {
@@ -129,7 +128,7 @@ function resetMaze() {
     });
     visitedCells = [];
     solutionPath = [];
-    isPaused = false; // Reset pause flag
+    isPaused = false; 
 }
 
 createMaze();
