@@ -101,7 +101,34 @@ h1 {
     background-color: #a71d2a;
 }
 
-/* Footer Styles */
+
+.explanation {
+    margin-top: 20px; 
+    font-size: 14px; 
+    color: #555; 
+    text-align: center; 
+}
+
+.visited-example {
+    display: inline-block;
+    width: 20px; 
+    height: 20px; 
+    background-color: lightblue; 
+    border: 1px solid #333; 
+    vertical-align: middle; 
+    margin-right: 5px; 
+}
+
+.path-example {
+    display: inline-block; 
+    width: 20px; 
+    height: 20px; 
+    background-color: yellow; 
+    border: 1px solid #333;
+    vertical-align: middle; 
+    margin-right: 5px; 
+}
+
 footer {
     margin-top: 20px;
     font-size: 14px;
